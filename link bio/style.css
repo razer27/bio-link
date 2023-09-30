@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* memindahkan text  */
+}
+
+body {
+  background-color: #191931;
+  /* mengubah warna background */
+  color: white;
+  /* mengubah warna font */
+  display: flex;
+  /* untuk mengubah element kebawah menjadi sejajar */
+  flex-direction: column;
+  align-items: center;
+  /* mengubah font ke tengah */
+  font-family: "outfit", sans-serif;
+  /* mengubah font */
+  padding-top: 4rem;
+  /* memindahkan body ke tempat yg kita inginkan */
+  gap: 1rem;
+  /* merubah jarak setiap element berjarak 1 rem  */
+}
+
+.bg-text-animation {
+  position: absolute;
+  /* untuk mengubah posisi ke atas body  */
+  top: 5rem;
+  /* mengatur alement ke atas ke bawah */
+  font-size: 12rem;
+  /* untuk mengubah ukuran font  */
+  text-transform: uppercase;
+  /* untuk mengubah font menjadi huruf besar  */
+  font-weight: 900;
+  /* untuk membuat font menjadi tebal  */
+  -webkit-text-stroke: 2px #2d2d56;
+  /* untuk menambah garis tepi font  */
+  -webkit-text-fill-color: transparent;
+  /* untuk mengubah font meanjadi transparan */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* untuk mengubah gaya font  */
+  z-index: -1;
+  /* untuk mengubah element ini ke belakang element lain  */
+  user-select: none;
+  /* supaya text blakang ny di block  */
+}
+
+.my-photo {
+  width: 10rem;
+  /* mengubah akuran img */
+  border-radius: 50%;
+  /* mengubah foto dari kotak menjadi bulat */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /* mengubah element menjadi semula */
+}
+
+.sosmed i {
+  font-size: 1.5rem;
+  /* mengubah akuran icon  */
+  color: #8787a3;
+  /* mengubah warnar icon  */
+}
+
+.sosmed i:hover {
+  color: white;
+  /* mengubah warna mouse masuk */
+}
+
+.sosmed a:not(:last-child) {
+  /* artinya semua element a kecuali element terakhir */
+  margin-right: 1rem;
+  /* mengubah jarak ke samping  */
+}
+
+ul {
+  width: 80%;
+  /* mengubah lebar background color */
+  max-width: 40rem;
+  /* max lebar ny /  jika sudah max dia akan berhenti menggubah lebarnya  */
+}
+
+ul li {
+  list-style: none;
+  /* mehilankan titik ul  */
+}
+
+ul.links li:not(:last-child) {
+  margin-bottom: 1rem;
+  /* mengubah jarak ke bawah */
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.link-card {
+  display: flex;
+  /* flex untuk menjajarkan elemen */
+  justify-content: space-between;
+  /* space between mengubah element pertama di awal dan element terkhir di akhir */
+  align-items: center;
+  background-color: #2d2d56;
+  /* mengubah warna background */
+  padding: 1rem;
+  /* mengubah akuran background color  */
+  border-radius: 50px;
+  /* mengubah kebulatan background color */
+  box-shadow: 8px 10px 0 #0f0f25;
+  /* menambahkan bayangan di belakan element
+  10 pertama ke kanan
+  10 kedua ke bawah
+  10 ketiga blur */
+  border: 2px solid #2d2d56;
+}
+
+.link-card:hover {
+  border: 2px solid white;
+  /* menambahkan border putih pada hover */
+}
+
+.links .link-icon {
+  background-image: linear-gradient(to top, purple, cyan);
+  /* mebuat costum icon  */
+  padding: 0.5rem;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  /* mengubah biar kotak / tidak gepeng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* mengubah icon biar ke tengah / biar tidak gepeng */
+}
+
+.links .link-icon i {
+  color: white;
+}
+
+.link-action {
+  color: #8787a3;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#toast {
+  width: max-content;
+  position: fixed;
+  top: 0;
+}
+
+.toast-container {
+  background-color: white;
+  color: #0f0f25;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone {
+  animation: hilang 2s ease-in-out 1s;
+  /* untuk hilang ny brapa detik 
+  tg pertama durasi mehilanya
+  kedua dilay mehilanya */
+}
+
+/* buat animasi link berhasil di salin  */
+@keyframes muncul {
+  from {
+    opacity: o;
+    /* dari mana  */
+    transform: translateY(-4rem);
+    /* untuk mengatur kecepatan animation  */
+  }
+  to {
+    opacity: 1;
+    /* ke mana  */
+    transform: translateY(-0);
+  }
+}
+
+@keyframes hilang {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
